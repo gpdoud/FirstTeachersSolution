@@ -188,9 +188,15 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201707141736177_Initialization.cs" />
-    <Compile Include="Migrations\201707141736177_Initialization.Designer.cs">
-      <DependentUpon>201707141736177_Initialization.cs</DependentUpon>
+    <Compile Include="JsonNetResult.cs" />
+    <Compile Include="JsonReturnMessage.cs" />
+    <Compile Include="Migrations\201707141918038_initialization.cs" />
+    <Compile Include="Migrations\201707141918038_initialization.Designer.cs">
+      <DependentUpon>201707141918038_initialization.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201707141926089_allow-dates-to-be-null.cs" />
+    <Compile Include="Migrations\201707141926089_allow-dates-to-be-null.Designer.cs">
+      <DependentUpon>201707141926089_allow-dates-to-be-null.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\FirstTeachersContext.cs" />
@@ -273,8 +279,11 @@
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201707141736177_Initialization.resx">
-      <DependentUpon>201707141736177_Initialization.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201707141918038_initialization.resx">
+      <DependentUpon>201707141918038_initialization.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201707141926089_allow-dates-to-be-null.resx">
+      <DependentUpon>201707141926089_allow-dates-to-be-null.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

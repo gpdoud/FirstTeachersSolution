@@ -7,13 +7,13 @@ namespace FirstTeachersProject.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class Initialization : IMigrationMetadata
+    public sealed partial class allowdatestobenull : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(Initialization));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(allowdatestobenull));
         
         string IMigrationMetadata.Id
         {
-            get { return "201707141736177_Initialization"; }
+            get { return "201707141926089_allow-dates-to-be-null"; }
         }
         
         string IMigrationMetadata.Source

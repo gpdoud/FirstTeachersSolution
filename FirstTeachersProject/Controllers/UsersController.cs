@@ -7,6 +7,8 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using FirstTeachersProject.Models;
+using WebApiUtilities;
+
 
 namespace FirstTeachersProject.Controllers
 {
@@ -14,8 +16,42 @@ namespace FirstTeachersProject.Controllers
     {
         private FirstTeachersContext db = new FirstTeachersContext();
 
-        // GET: Users
-        public ActionResult Index()
+		public ActionResult List() {
+			return new JsonNetResult { Data = db.Users.ToList() };
+		}
+		public ActionResult Get(int id) {
+			return new JsonNetResult { Data = db.Users.Find(id) };
+		}
+		public ActionResult Add(User user) {
+			if(user == null) {	return InputIsNullOrEmpty(); }
+			db.Users.Add(user);
+			db.SaveChanges();
+			return new JsonNetResult { Data = new JsonReturnMessage { Result = "Ok", Message = "Success" } };
+		}
+		public ActionResult Change(User user) {
+			if (user == null) { return InputIsNullOrEmpty(); }
+			User aUser = db.Users.Find(user.Id);
+			aUser.Clone(user);
+			db.SaveChanges();
+			return new JsonNetResult { Data = new JsonReturnMessage { Result = "Ok", Message = "Success" } };
+		}
+		public ActionResult Remove(int id) {
+			if (id == 0) { return InputIsZeroForId(); }
+			User user = db.Users.Find(id);
+			db.Users.Remove(user);
+			db.SaveChanges();
+			return new JsonNetResult { Data = new JsonReturnMessage { Result = "Ok", Message = "Success" } };
+		}
+		private ActionResult InputIsNullOrEmpty() {
+			return new JsonNetResult { Data = new JsonReturnMessage { Result = "Error", Message = "Input is NULL or Empty!" } };
+		}
+		private ActionResult InputIsZeroForId() {
+			return new JsonNetResult { Data = new JsonReturnMessage { Result = "Error", Message = "Input is Zero for Id!" } };
+		}
+
+		#region MVC Default Actions
+		// GET: Users
+		public ActionResult Index()
         {
             return View(db.Users.ToList());
         }
@@ -114,8 +150,9 @@ namespace FirstTeachersProject.Controllers
             db.SaveChanges();
             return RedirectToAction("Index");
         }
+		#endregion
 
-        protected override void Dispose(bool disposing)
+		protected override void Dispose(bool disposing)
         {
             if (disposing)
             {
