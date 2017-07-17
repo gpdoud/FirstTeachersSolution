@@ -1,0 +1,23 @@
+<h4>{{title}}</h4>
+<table class='table table-default'>
+	<thead>
+	<tr><th>Id</th><th>Name</th><th>User Name</th><th>Email</th><th>Admin</th><th>Active</th><th>Action</th></tr>
+	</thead>
+	<tbody>
+	
+	<tr *ngFor='let user of users'>
+		<td>{{user.Id}}</td>
+		<td>{{user.FirstName}} {{user.LastName}}</td>
+		<td>{{user.UserName}}</td>
+		<td>{{user.Email}}</td>
+		<td>{{user.IsAdmin ? 'Yes' : ' '}}</td>
+		<td>{{user.Active ? 'Yes' : ' '}}</td>
+		<td>
+			<span><a routerLink="/user/{{user.Id}}"><span class="glyphicon glyphicon-list-alt" title="Detail"></span></a></span>
+			<span><a routerLink="/user/edit/{{user.Id}}"><span class="glyphicon glyphicon-pencil" title="Edit"></span></a></span>
+			<!-- <span ng-if="ctrl.IsUserAdmin"><a href="#/users/remove/{{user.ID}}"></a></span> -->
+		</td>
+	</tr>
+	
+	</tbody>
+</table>

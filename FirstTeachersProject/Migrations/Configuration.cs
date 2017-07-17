@@ -1,6 +1,7 @@
 namespace FirstTeachersProject.Migrations
 {
-    using System;
+	using FirstTeachersProject.Models;
+	using System;
     using System.Data.Entity;
     using System.Data.Entity.Migrations;
     using System.Linq;
@@ -14,7 +15,14 @@ namespace FirstTeachersProject.Migrations
 
         protected override void Seed(FirstTeachersProject.Models.FirstTeachersContext context)
         {
-            //  This method will be called after migrating to the latest version.
+			//  This method will be called after migrating to the latest version.
+
+			context.Users.AddOrUpdate(
+				u => u.UserName, 
+				new User { FirstName = "Greg", LastName = "Doud", UserName = "saadmin", Password = "radioham"
+						, Email = "gpdoud@gmail.com", IsAdmin = true, Active = true
+						, DateCreated = new DateTime(1957, 8, 27) }
+			);
 
             //  You can use the DbSet<T>.AddOrUpdate() helper extension method 
             //  to avoid creating duplicate seed data. E.g.
