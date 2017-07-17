@@ -7,7 +7,7 @@ import 'rxjs/add/operator/toPromise';
 
 @Component({
 	selector: 'user-list'
-	,templateUrl: 'user-list.component.html'
+	,templateUrl: './user-list.component.html'
 	,styles: []
 	,providers: [UserService]
 })
