@@ -2,11 +2,17 @@ import { Injectable } from '@angular/core';
 import { Headers, Http } from '@angular/http';
 
 import 'rxjs/add/operator/toPromise';
+import 'rxjs/add/operator/map';
+import { Observable } from 'rxjs';
 
 import { User } from './user';
 
 @Injectable()
 export class UserService {
+
+	private urlBase: string = 'http://localhost:50814/';
+	private mvcCtrl: string = 'Users/';
+	private url: string = this.urlBase + this.mvcCtrl;
 
 	user: User
 
@@ -19,17 +25,38 @@ export class UserService {
 	}
 	constructor(private http: Http) {}
 
-	getUser(id): Promise<User> {
-		return this.http.get('http://localhost:50814/Users/Get/'+id)
+	list(): Promise<User[]> {
+		return this.http.get(this.url+'List')
+			.toPromise()
+			.then(resp => resp.json() as User[])
+			.catch(this.handleError);	
+	}
+
+	get(id): Promise<User> {
+		return this.http.get(this.url+'Get/'+id)
 			.toPromise()
 			.then(resp => resp.json() as User)
 			.catch(this.handleError);	
 	}
 
-	getUsers(): Promise<User[]> {
-		return this.http.get('http://localhost:50814/Users/List')
+	add(user: User): Promise<User> {
+		return this.http.post(this.url+'Add', user)
 			.toPromise()
-			.then(resp => resp.json() as User[])
+			.then(resp => resp.json || {})
+			.catch(this.handleError);
+	}
+
+	change(user: User): Promise<any> {
+		return this.http.post(this.url+'Change', user)
+			.toPromise()
+			.then(resp => resp.json as any)
+			.catch(this.handleError);
+	}
+
+	remove(id): Promise<any> {
+		return this.http.get(this.url+'Remove/'+id)
+			.toPromise()
+			.then(resp => resp.json() as any)
 			.catch(this.handleError);	
 	}
 

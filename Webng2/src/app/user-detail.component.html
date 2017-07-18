@@ -1,0 +1,13 @@
+<div class='form-horizontal'  *ngIf='user'>
+	<table class='table table-default'>
+	<tr><td>Id</td><td>{{user.Id}}</td></tr>
+	<tr><td>Name</td><td>{{user.FirstName + ' ' + user.LastName}}</td></tr>
+	<tr><td>User name</td><td>{{user.UserName}}</td></tr>
+	<tr><td>Email</td><td>{{user.Email}}</td></tr>
+	<tr><td>Admin</td><td>{{user.IsAdmin ? 'Yes' : ''}}</td></tr>
+	<tr><td>Active</td><td>{{user.Active ? 'Yes' : ''}}</td></tr>
+	<tr><td colspan="2">
+		<button routerLink='/user/edit/{{user.Id}}' id='update' class='col-md-1 col-md-offset-2 btn btn-primary' [disabled]="editable">Update</button>
+		<button (click)='remove(user.Id)' id='delete' class='col-md-1 col-md-offset-2 btn btn-danger' [disabled]="editable">Delete</button></td></tr>
+	</table>
+</div>

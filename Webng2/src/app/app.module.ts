@@ -11,8 +11,9 @@ import { AboutComponent } from './about.component';
 import { ContentComponent } from './content.component';
 import { MenuListComponent } from './menu-list.component';
 import { UserService } from './user.service';
-import { UserComponent } from './user.component';
+import { UserDetailComponent } from './user-detail.component';
 import { UserListComponent } from './user-list.component';
+import { UserEditComponent } from './user-edit.component';
 import { UserFormComponent } from './user-form.component';
 
 @NgModule({
@@ -23,8 +24,9 @@ import { UserFormComponent } from './user-form.component';
     ,AboutComponent
     ,MenuComponent
     ,MenuListComponent
-    ,UserComponent
+    ,UserDetailComponent
     ,UserListComponent
+    ,UserEditComponent
     ,UserFormComponent	
   ],
   imports: [

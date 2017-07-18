@@ -25,7 +25,7 @@ export class UserListComponent implements OnInit {
 	}
 
 	getUsers(): void {
-		this.UserSvc.getUsers()
+		this.UserSvc.list()
 			.then(resp => this.users = resp);
 
 		// this will bring back a static User[]

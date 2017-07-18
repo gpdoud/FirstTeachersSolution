@@ -29,7 +29,7 @@ export class MenuListComponent {
 		this.menus = [
 			new MenuComponent('First Teachers Ministry','/', 'System name', true)
 			,new MenuComponent('Home','/', 'Home', true)
-			,new MenuComponent('User','/user', 'User', true)
+			,new MenuComponent('User','/user/list', 'User', true)
 			,new MenuComponent('About','/about', 'About', true)
 		];
 	}

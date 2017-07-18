@@ -23,13 +23,13 @@ namespace FirstTeachersProject.Controllers
 			return new JsonNetResult { Data = db.Users.Find(id) };
 		}
 		public ActionResult Add(User user) {
-			if(user == null) {	return InputIsNullOrEmpty(); }
+			if(user.FirstName == null) { return InputIsNullOrEmpty(); }
 			db.Users.Add(user);
 			db.SaveChanges();
 			return new JsonNetResult { Data = new JsonReturnMessage { Result = "Ok", Message = "Success" } };
 		}
 		public ActionResult Change(User user) {
-			if (user == null) { return InputIsNullOrEmpty(); }
+			if (user.FirstName == null) { return InputIsNullOrEmpty(); }
 			User aUser = db.Users.Find(user.Id);
 			aUser.Clone(user);
 			db.SaveChanges();

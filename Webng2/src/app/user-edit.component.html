@@ -1,15 +1,11 @@
 <div class='form-horizontal'  *ngIf='user'>
 	<div class='form-group'>
 		<label class='col-md-2 control-label' for="user-id">Id</label>
-		<div class='col-md-1'>
-			<label class='col-md-2 control-label' for="user-id">{{user.Id}}</label>
-		</div>
+			<label class='control-label' for="user-id">{{user.Id}}</label>
 	</div>
 	<div class='form-group' >
 		<label class='col-md-2  control-label' for="user-first-name">First Name</label>
-		<div class='col-md-4'>
-			<input class='form-control' type='text' id='user-first-name' [disabled]="editable" value={{user.FirstName}} placeholder="First Name">
-		</div>
+			<input class='col-md-4 form-control' type='text' id='user-first-name' [disabled]="editable" value={{user.FirstName}} placeholder="First Name">
 	</div>
 	<div class='form-group' >
 		<label class='col-md-2  control-label' for="user-last-name">Last Name</label>
@@ -37,6 +33,6 @@
 	</div>
 	<div class='form-group'>
 		<button id='update' class='col-md-1 col-md-offset-2 btn btn-primary' [disabled]="editable">Update</button>
-		<button id='delete' class='col-md-1 col-md-offset-1 btn btn-danger' [disabled]="editable">Delete</button>
+		<button (click)='remove(user.Id)' id='delete' class='col-md-1 col-md-offset-1 btn btn-danger' [disabled]="editable">Delete</button>
 	</div>
 </div>

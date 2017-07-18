@@ -9,20 +9,31 @@ import { User } from './user';
 
 @Component({
 	selector: 'user-comp'
-	,templateUrl: './user.component.html'
+	,templateUrl: './user-detail.component.html'
 })
-export class UserComponent implements OnInit {
+export class UserDetailComponent implements OnInit {
 
-	@Output() editable: string = 'disabled';
+	@Output() editable: string = ''; // 'disabled';
 
 	@Input() user: User;
 
 	constructor(private userSvc: UserService, private route: ActivatedRoute, private router: Router) {}
 
+	remove(id) {
+		this.userSvc.remove(id).then(
+			resp => this.logAndNav(resp)
+		)
+	}
+
+	logAndNav(resp) {
+		console.log(resp),
+		this.router.navigate(['/user'])
+	}
+
 	ngOnInit() {
 		this.route.paramMap
 			.switchMap((params: ParamMap) =>
-				this.userSvc.getUser(params.get('id')))
+				this.userSvc.get(params.get('id')))
 			.subscribe((user: User) => this.user = user);
 	}
 

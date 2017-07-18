@@ -14,7 +14,7 @@
 		<td>{{user.IsAdmin ? 'Yes' : ' '}}</td>
 		<td>{{user.Active ? 'Yes' : ' '}}</td>
 		<td>
-			<span><a routerLink="/user/{{user.Id}}"><span class="glyphicon glyphicon-list-alt" title="Detail"></span></a></span>
+			<span><a routerLink="/user/detail/{{user.Id}}"><span class="glyphicon glyphicon-list-alt" title="Detail"></span></a></span>
 			<span><a routerLink="/user/edit/{{user.Id}}"><span class="glyphicon glyphicon-pencil" title="Edit"></span></a></span>
 			<!-- <span ng-if="ctrl.IsUserAdmin"><a href="#/users/remove/{{user.ID}}"></a></span> -->
 		</td>
