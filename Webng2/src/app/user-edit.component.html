@@ -1,38 +1,48 @@
 <div class='form-horizontal'  *ngIf='user'>
 	<div class='form-group'>
 		<label class='col-md-2 control-label' for="user-id">Id</label>
-			<label class='control-label' for="user-id">{{user.Id}}</label>
+		<div class='col-md-1'>
+			<label class='control-label form-control' name='Id' id="user-id">{{user.Id}}</label>
+		</div>
 	</div>
 	<div class='form-group' >
 		<label class='col-md-2  control-label' for="user-first-name">First Name</label>
-			<input class='col-md-4 form-control' type='text' id='user-first-name' [disabled]="editable" value={{user.FirstName}} placeholder="First Name">
+		<div class='col-md-4'>
+			<input class='col-md-4 form-control' name='FirstName' type='text' id='user-first-name' [(ngModel)]='user.FirstName' placeholder="First Name">
+		</div>
 	</div>
 	<div class='form-group' >
 		<label class='col-md-2  control-label' for="user-last-name">Last Name</label>
 		<div class='col-md-4'>
-			<input class='form-control' type='text' id='user-last-name' [disabled]="editable" value={{user.LastName}} placeholder="Last Name">
+			<input class='form-control' name='LastName' type='text' id='user-last-name' [(ngModel)]='user.LastName' placeholder="Last Name">
 		</div>
 	</div>	
 	<div class='form-group' >
 		<label class='col-md-2  control-label' for="user-user-name">User name</label>
 		<div class='col-md-4'>
-			<input class='form-control ' type='text' id='user-user-name' [disabled]="editable" value={{user.UserName}} placeholder="User Name">
+			<input class='form-control ' name='UserName' type='text' id='user-user-name' [(ngModel)]='user.UserName' placeholder="User Name">
 		</div>
 	</div>
 	<div class='form-group' >
 		<label class='col-md-2  control-label' for="user-email">Email</label>
 		<div class='col-md-4'>
-			<input class='form-control ' type='text' id='user-email' [disabled]="editable" value={{user.Email}} placeholder="Email">
+			<input class='form-control ' name='Email' type='text' id='user-email' [(ngModel)]='user.Email' placeholder="Email">
+		</div>
+	</div>
+	<div class='form-group' >
+		<label class='col-md-2  control-label' for="user-is-admin">Admin</label>
+		<div class='col-md-1'>
+			<input class='form-control' name='IsAdmin' type='checkbox' id='user-is-admin' [(ngModel)]='user.IsAdmin' placeholder="Active">
 		</div>
 	</div>
 	<div class='form-group' >
 		<label class='col-md-2  control-label' for="user-active">Active</label>
 		<div class='col-md-1'>
-			<input class='form-control' type='checkbox' id='user-active' [disabled]="editable" checked="{{user.Active ? 'checked' : ''}}" placeholder="Active">
+			<input class='form-control' name='Active' type='checkbox' id='user-active' [(ngModel)]='user.Active' placeholder="Active">
 		</div>
 	</div>
 	<div class='form-group'>
-		<button id='update' class='col-md-1 col-md-offset-2 btn btn-primary' [disabled]="editable">Update</button>
-		<button (click)='remove(user.Id)' id='delete' class='col-md-1 col-md-offset-1 btn btn-danger' [disabled]="editable">Delete</button>
+		<button (click)='update()' id='update' class='col-md-1 col-md-offset-2 btn btn-primary'>Update</button>
 	</div>
+	{{diagnostic}}
 </div>

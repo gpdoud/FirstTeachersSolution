@@ -15,19 +15,19 @@ export class UserEditComponent implements OnInit {
 
 	@Output() editable: string = ''; // 'disabled';
 
-	@Input() user: User;
+	user: User;
 
 	constructor(private userSvc: UserService, private route: ActivatedRoute, private router: Router) {}
 
-	update(user) {
-		this.userSvc.change(user).then(
+	update() {
+		this.userSvc.change(this.user).then(
 			resp => this.logAndNav(resp)
 		)
 	}
 
 	logAndNav(resp) {
 		console.log(resp),
-		this.router.navigate(['/user'])
+		this.router.navigate(['/user/list'])
 	}
 
 	ngOnInit() {
@@ -36,5 +36,7 @@ export class UserEditComponent implements OnInit {
 				this.userSvc.get(params.get('id')))
 			.subscribe((user: User) => this.user = user);
 	}
+
+  	get diagnostic() { return JSON.stringify(this.user); }
 
 }
