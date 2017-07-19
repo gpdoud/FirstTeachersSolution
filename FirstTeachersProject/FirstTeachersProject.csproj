@@ -183,6 +183,7 @@
     <Compile Include="Areas\HelpPage\SampleGeneration\TextSample.cs" />
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ParentsController.cs" />
     <Compile Include="Controllers\UsersController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="Global.asax.cs">
@@ -202,8 +203,17 @@
     <Compile Include="Migrations\201707142030376_add-admin-account-on-db-init.Designer.cs">
       <DependentUpon>201707142030376_add-admin-account-on-db-init.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201707191405122_added parent model and controller.cs" />
+    <Compile Include="Migrations\201707191405122_added parent model and controller.Designer.cs">
+      <DependentUpon>201707191405122_added parent model and controller.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201707191422146_Fix mistake of zip being only 2 characters and state being 50.cs" />
+    <Compile Include="Migrations\201707191422146_Fix mistake of zip being only 2 characters and state being 50.Designer.cs">
+      <DependentUpon>201707191422146_Fix mistake of zip being only 2 characters and state being 50.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\FirstTeachersContext.cs" />
+    <Compile Include="Models\Parent.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -265,6 +275,11 @@
     <Content Include="Views\Users\Details.cshtml" />
     <Content Include="Views\Users\Edit.cshtml" />
     <Content Include="Views\Users\Index.cshtml" />
+    <Content Include="Views\Parents\Create.cshtml" />
+    <Content Include="Views\Parents\Delete.cshtml" />
+    <Content Include="Views\Parents\Details.cshtml" />
+    <Content Include="Views\Parents\Edit.cshtml" />
+    <Content Include="Views\Parents\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -293,6 +308,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201707142030376_add-admin-account-on-db-init.resx">
       <DependentUpon>201707142030376_add-admin-account-on-db-init.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201707191405122_added parent model and controller.resx">
+      <DependentUpon>201707191405122_added parent model and controller.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201707191422146_Fix mistake of zip being only 2 characters and state being 50.resx">
+      <DependentUpon>201707191422146_Fix mistake of zip being only 2 characters and state being 50.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
