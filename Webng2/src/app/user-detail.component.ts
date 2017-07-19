@@ -27,7 +27,7 @@ export class UserDetailComponent implements OnInit {
 
 	logAndNav(resp) {
 		console.log(resp),
-		this.router.navigate(['/user'])
+		this.router.navigate(['/user/list'])
 	}
 
 	ngOnInit() {

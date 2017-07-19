@@ -7,7 +7,7 @@
 	<tr><td>Admin</td><td>{{user.IsAdmin ? 'Yes' : ''}}</td></tr>
 	<tr><td>Active</td><td>{{user.Active ? 'Yes' : ''}}</td></tr>
 	<tr><td colspan="2">
-		<button routerLink='/user/edit/{{user.Id}}' id='update' class='col-md-1 col-md-offset-2 btn btn-primary' [disabled]="editable">Update</button>
+		<button routerLink='/user/edit/{{user.Id}}' id='update' class='col-md-1 col-md-offset-1 btn btn-primary' [disabled]="editable">Edit</button>
 		<button (click)='remove(user.Id)' id='delete' class='col-md-1 col-md-offset-2 btn btn-danger' [disabled]="editable">Delete</button></td></tr>
 	</table>
 </div>

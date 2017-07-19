@@ -5,13 +5,13 @@ import { UserService } from './user.service';
 import { User } from './user';
 
 @Component({
-	selector: 'user-form'
-	,templateUrl: './user-form.component.html'
+	selector: 'user-add'
+	,templateUrl: './user-add.component.html'
 	,providers: [
 		UserService
 	]
 })
-export class UserFormComponent implements OnInit {
+export class UserAddComponent implements OnInit {
 
 	user = new User(0, '', '', '', '', '', false, true, new Date(), null, null);
 
@@ -24,8 +24,8 @@ export class UserFormComponent implements OnInit {
 	}
 
 	logAndNav(resp) {
-		console.log(resp.json),
-		this.router.navigate(['/user'])
+		console.log(resp),
+		this.router.navigate(['/user/list'])
 	}
 
 	ngOnInit() {

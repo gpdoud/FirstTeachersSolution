@@ -14,7 +14,7 @@ import { UserService } from './user.service';
 import { UserDetailComponent } from './user-detail.component';
 import { UserListComponent } from './user-list.component';
 import { UserEditComponent } from './user-edit.component';
-import { UserFormComponent } from './user-form.component';
+import { UserAddComponent } from './user-add.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +27,7 @@ import { UserFormComponent } from './user-form.component';
     ,UserDetailComponent
     ,UserListComponent
     ,UserEditComponent
-    ,UserFormComponent	
+    ,UserAddComponent	
   ],
   imports: [
     BrowserModule

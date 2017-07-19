@@ -42,21 +42,21 @@ export class UserService {
 	add(user: User): Promise<User> {
 		return this.http.post(this.url+'Add', user)
 			.toPromise()
-			.then(resp => resp.json || {})
+			.then(resp => resp.json() || {})
 			.catch(this.handleError);
 	}
 
 	change(user: User): Promise<any> {
 		return this.http.post(this.url+'Change', user)
 			.toPromise()
-			.then(resp => resp.json as any)
+			.then(resp => resp.json() || {})
 			.catch(this.handleError);
 	}
 
 	remove(id): Promise<any> {
 		return this.http.get(this.url+'Remove/'+id)
 			.toPromise()
-			.then(resp => resp.json() as any)
+			.then(resp => resp.json() || {})
 			.catch(this.handleError);	
 	}
 
