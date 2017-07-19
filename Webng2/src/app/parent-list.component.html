@@ -1,0 +1,25 @@
+<h4>{{title}}</h4>
+<a routerLink='/parent/add'>Create New</a>
+<table class='table table-default'>
+	<thead>
+	<tr><th>Id</th><th>Name</th><th>Address</th><th>City,St,Zip</th><th>Email</th><th>Phone</th><th>Active</th><th>Action</th></tr>
+	</thead>
+	<tbody>
+	
+	<tr *ngFor='let parent of parents'>
+		<td>{{parent.Id}}</td>
+		<td>{{parent.Name}}</td>
+		<td>{{parent.Address}}</td>
+		<td>{{parent.City}}, {{parent.State}} {{parent.Zip}}</td>
+		<td>{{parent.Email}}</td>
+		<td>{{parent.Phone}}</td>
+		<td>{{parent.Active ? 'Yes' : ' '}}</td>
+		<td>
+			<span><a routerLink="/parent/detail/{{parent.Id}}"><span class="glyphicon glyphicon-list-alt" title="Detail"></span></a></span>
+			<span><a routerLink="/parent/edit/{{parent.Id}}"><span class="glyphicon glyphicon-pencil" title="Edit"></span></a></span>
+			<!-- <span ng-if="ctrl.IsUserAdmin"><a href="#/users/remove/{{user.ID}}"></a></span> -->
+		</td>
+	</tr>
+	
+	</tbody>
+</table>

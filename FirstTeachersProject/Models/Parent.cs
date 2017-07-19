@@ -22,6 +22,10 @@ namespace FirstTeachersProject.Models {
 		[MaxLength(10)]
 		[Required]
 		public string Zip { get; set; } = "45140";
+		[MaxLength(80)]
+		public string Email { get; set; }
+		[MaxLength(20)]
+		public string Phone { get; set; }
 		public bool Active { get; set; } = true;
 		public DateTime DateCreated { get; set; } = DateTime.Now;
 		public DateTime? DateUpdated { get; set; } = null;
@@ -33,6 +37,8 @@ namespace FirstTeachersProject.Models {
 			this.City = parent.City;
 			this.State = parent.State;
 			this.Zip = parent.Zip;
+			this.Email = parent.Email;
+			this.Phone = parent.Phone;
 			this.Active = parent.Active;
 			this.DateCreated = parent.DateCreated;
 			this.DateUpdated = parent.DateUpdated;

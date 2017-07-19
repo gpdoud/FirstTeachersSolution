@@ -1,0 +1,72 @@
+<div class='form-horizontal'  *ngIf='parent'>
+	<div class='form-group'>
+		<label class='col-md-2 control-label' for="parent-id">Id</label>
+		<div class='col-md-1'>
+			<label class='control-label form-control' name='Id' id="parent-id">{{parent.Id}}</label>
+		</div>
+	</div>
+	<div class='form-group' >
+		<label class='col-md-2  control-label' for="parent-first-name">Name</label>
+		<div class='col-md-4'>
+			<input class='col-md-4 form-control' name='FirstName' type='text' id='parent-first-name' [(ngModel)]='parent.Name' placeholder="Name">
+		</div>
+	</div>
+	<div class='form-group' >
+		<label class='col-md-2  control-label' for="parent-last-name">Address</label>
+		<div class='col-md-4'>
+			<input class='form-control' name='Address' type='text' id='parent-last-name' [(ngModel)]='parent.Address' placeholder="Address">
+		</div>
+	</div>	
+	<div class='form-group' >
+		<label class='col-md-2  control-label' for="parent-parent-name">City</label>
+		<div class='col-md-4'>
+			<input class='form-control ' name='City' type='text' id='parent-parent-name' [(ngModel)]='parent.City' placeholder="City">
+		</div>
+	</div>
+	<div class='form-group' >
+		<label class='col-md-2  control-label' for="parent-email">State</label>
+		<div class='col-md-4'>
+			<input class='form-control ' name='State' type='text' id='parent-state' [(ngModel)]='parent.State' placeholder="State">
+		</div>
+	</div>
+	<div class='form-group' >
+		<label class='col-md-2  control-label' for="parent-city">City</label>
+		<div class='col-md-4'>
+			<input class='form-control' name='City' type='text' id='parent-city' [(ngModel)]='parent.City' placeholder="City">
+		</div>
+	</div>
+	<div class='form-group' >
+		<label class='col-md-2  control-label' for="parent-state">State</label>
+		<div class='col-md-4'>
+			<input class='form-control' name='State' type='text' id='parent-state' [(ngModel)]='parent.State' placeholder="State">
+		</div>
+	</div>
+	<div class='form-group' >
+		<label class='col-md-2  control-label' for="parent-zip">Zip</label>
+		<div class='col-md-4'>
+			<input class='form-control' name='Zip' type='text' id='parent-zip' [(ngModel)]='parent.Zip' placeholder="Zip">
+		</div>
+	</div>
+	<div class='form-group' >
+		<label class='col-md-2  control-label' for="parent-email">Email</label>
+		<div class='col-md-4'>
+			<input class='form-control' name='Email' type='email' id='parent-email' [(ngModel)]='parent.Email' placeholder="Email">
+		</div>
+	</div>
+	<div class='form-group' >
+		<label class='col-md-2  control-label' for="parent-phone">Phone</label>
+		<div class='col-md-4'>
+			<input class='form-control' name='Phone' type='phone' id='parent-phone' [(ngModel)]='parent.Phone' placeholder="Phone">
+		</div>
+	</div>
+	<div class='form-group' >
+		<label class='col-md-2  control-label' for="parent-active">Active</label>
+		<div class='col-md-1'>
+			<input class='form-control' name='Active' type='checkbox' id='parent-active' [(ngModel)]='parent.Active' placeholder="Active">
+		</div>
+	</div>
+	<div class='form-group'>
+		<button (click)='update()' id='update' class='col-md-1 col-md-offset-2 btn btn-primary'>Update</button>
+	</div>
+	<!-- {{diagnostic}} -->
+</div>

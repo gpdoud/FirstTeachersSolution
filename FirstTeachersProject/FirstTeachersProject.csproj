@@ -211,6 +211,10 @@
     <Compile Include="Migrations\201707191422146_Fix mistake of zip being only 2 characters and state being 50.Designer.cs">
       <DependentUpon>201707191422146_Fix mistake of zip being only 2 characters and state being 50.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201707191517025_Added Email and Phone to parent.cs" />
+    <Compile Include="Migrations\201707191517025_Added Email and Phone to parent.Designer.cs">
+      <DependentUpon>201707191517025_Added Email and Phone to parent.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\FirstTeachersContext.cs" />
     <Compile Include="Models\Parent.cs" />
@@ -314,6 +318,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201707191422146_Fix mistake of zip being only 2 characters and state being 50.resx">
       <DependentUpon>201707191422146_Fix mistake of zip being only 2 characters and state being 50.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201707191517025_Added Email and Phone to parent.resx">
+      <DependentUpon>201707191517025_Added Email and Phone to parent.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

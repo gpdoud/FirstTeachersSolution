@@ -1,0 +1,14 @@
+<div class='form-horizontal'  *ngIf='parent'>
+	<table class='table table-default'>
+	<tr><td>Id</td><td>{{parent.Id}}</td></tr>
+	<tr><td>Name</td><td>{{parent.Name}}</td></tr>
+	<tr><td>Address</td><td>{{parent.Address}}</td></tr>
+	<tr><td>City,St,Zip</td><td>{{parent.City + ', ' + parent.State + ' ' + parent.Zip}}</td></tr>
+	<tr><td>Email</td><td>{{parent.Email}}</td></tr>
+	<tr><td>Phone</td><td>{{parent.Phone}}</td></tr>
+	<tr><td>Active</td><td>{{parent.Active ? 'Yes' : ''}}</td></tr>
+	<tr><td colspan="2">
+		<button routerLink='/parent/edit/{{parent.Id}}' id='update' class='col-md-1 col-md-offset-1 btn btn-primary' [disabled]="editable">Edit</button>
+		<button (click)='remove(parent.Id)' id='delete' class='col-md-1 col-md-offset-2 btn btn-danger' [disabled]="editable">Delete</button></td></tr>
+	</table>
+</div>
