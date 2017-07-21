@@ -1,0 +1,29 @@
+<h4>{{title}}</h4>
+<a routerLink='/child/add'>Create New</a>
+<table class='table table-default'>
+	<thead>
+	<tr>
+		<th>Id</th>
+		<th>Name</th>
+		<th>Parent(s)</th>
+		<th>Date Baptized</th>
+		<th>Active</th>
+		<th>Action</th></tr>
+	</thead>
+	<tbody>
+	
+	<tr *ngFor='let child of children'>
+		<td>{{child.Id}}</td>
+		<td>{{child.Name}}</td>
+		<td>{{child.Parent.Name}}</td>
+		<td>{{child.DateBaptized | date}}
+		<td>{{child.Active ? 'Yes' : ' '}}</td>
+		<td>
+			<span><a routerLink="/child/detail/{{child.Id}}"><span class="glyphicon glyphicon-list-alt" title="Detail"></span></a></span>
+			<span><a routerLink="/child/edit/{{child.Id}}"><span class="glyphicon glyphicon-pencil" title="Edit"></span></a></span>
+			<!-- <span ng-if="ctrl.IsUserAdmin"><a href="#/users/remove/{{user.ID}}"></a></span> -->
+		</td>
+	</tr>
+	
+	</tbody>
+</table>

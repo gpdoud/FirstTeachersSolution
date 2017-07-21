@@ -224,6 +224,14 @@
     <Compile Include="Migrations\201707211329082_Added constraints to Child model.Designer.cs">
       <DependentUpon>201707211329082_Added constraints to Child model.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201707211540377_Added Active, DateCreated, and DateUpdated to Child.cs" />
+    <Compile Include="Migrations\201707211540377_Added Active, DateCreated, and DateUpdated to Child.Designer.cs">
+      <DependentUpon>201707211540377_Added Active, DateCreated, and DateUpdated to Child.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201707211546409_Updated Child.Clone method to include Active, DateCreated, and DateUpdated.cs" />
+    <Compile Include="Migrations\201707211546409_Updated Child.Clone method to include Active, DateCreated, and DateUpdated.Designer.cs">
+      <DependentUpon>201707211546409_Updated Child.Clone method to include Active, DateCreated, and DateUpdated.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Child.cs" />
     <Compile Include="Models\FirstTeachersContext.cs" />
@@ -342,6 +350,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201707211329082_Added constraints to Child model.resx">
       <DependentUpon>201707211329082_Added constraints to Child model.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201707211540377_Added Active, DateCreated, and DateUpdated to Child.resx">
+      <DependentUpon>201707211540377_Added Active, DateCreated, and DateUpdated to Child.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201707211546409_Updated Child.Clone method to include Active, DateCreated, and DateUpdated.resx">
+      <DependentUpon>201707211546409_Updated Child.Clone method to include Active, DateCreated, and DateUpdated.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

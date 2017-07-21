@@ -20,6 +20,11 @@ import { UserAddComponent } from './user-add.component';
 import { UserDetailComponent } from './user-detail.component';
 import { UserEditComponent } from './user-edit.component';
 import { UserListComponent } from './user-list.component';
+import { Child } from './child';
+import { ChildrenService } from './children.service';
+import { ChildrenListComponent } from './children-list/children-list.component';
+import { ChildDetailComponent } from './child-detail/child-detail.component';
+import { ChildAddComponent } from './child-add/child-add.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +41,8 @@ import { UserListComponent } from './user-list.component';
     ,UserDetailComponent
     ,UserListComponent
     ,UserEditComponent
-    ,UserAddComponent	
+    ,UserAddComponent
+    ,ChildrenListComponent, ChildDetailComponent, ChildAddComponent	
   ],
   imports: [
     BrowserModule
@@ -46,6 +52,7 @@ import { UserListComponent } from './user-list.component';
   ],
   providers: [
     ParentService
+    ,ChildrenService
   	,UserService
   ],
   bootstrap: [AppComponent]

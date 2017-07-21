@@ -31,6 +31,7 @@ export class MenuListComponent {
 			,new MenuComponent('Home','/', 'Home', true)
 			,new MenuComponent('User','/user/list', 'User', true)
 			,new MenuComponent('Parent','/parent/list', 'Parent', true)
+			,new MenuComponent('Child', '/child/list', 'Child', true)
 			,new MenuComponent('About','/about', 'About', true)
 		];
 	}
