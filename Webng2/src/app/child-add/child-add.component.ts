@@ -16,9 +16,15 @@ export class ChildAddComponent implements OnInit {
 
 	child = new Child(0, '', new Date(), 0, true, new Date(), null);
 
-	parents: Parent[];
+	parents;
 
 	constructor(private childrenSvc: ChildrenService, private parentSvc: ParentService, private router: Router) {}
+
+	getParents(): void {
+		this.parentSvc.list().then(
+			resp => this.parents = resp
+		);
+	}
 
 	OnSubmit() {
 		this.childrenSvc.add(this.child).then(
@@ -32,9 +38,7 @@ export class ChildAddComponent implements OnInit {
 	}
 
 	ngOnInit() {
-		this.parentSvc.list().then(
-			resp => this.parents = resp
-		);
+		this.getParents();
 	}
 
 	// TODO: Remove this when we're done

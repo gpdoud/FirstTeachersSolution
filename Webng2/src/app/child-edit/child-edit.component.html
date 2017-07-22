@@ -1,0 +1,37 @@
+<div class='form-horizontal'  *ngIf='child'>
+	<div class='form-group'>
+		<label class='col-md-2 control-label' for="child-id">Id</label>
+		<div class='col-md-1'>
+			<label class='control-label form-control' name='Id' id="child-id">{{child.Id}}</label>
+		</div>
+	</div>
+	<div class='form-group' >
+		<label class='col-md-2  control-label' for="child-name">Name</label>
+		<div class='col-md-4'>
+			<input class='col-md-4 form-control' name='FirstName' type='text' id='child-name' [(ngModel)]='child.Name' placeholder="Name">
+		</div>
+	</div>
+		<div class='form-group'>
+			<label class='col-md-2 control-label' for='child-baptized'>Baptized</label>
+			<div class='col-md-4'>
+				<input class='form-control' type='text' id='child-baptized' [(ngModel)]='child.DateBaptized' name='Baptized'>
+			</div>
+		</div>
+		<div class='form-group'>
+			<label class='col-md-2 control-label' for='child-parent'>Parent</label>
+			<div class='col-md-4'>
+				<select [(ngModel)]="child.ParentId" name='ParentId' class='col-md-4 form-control'>
+  					<option *ngFor="let parent of parents" [ngValue]="parent.Id">{{parent.Name}}</option>
+				</select>
+			</div>
+		</div>	<div class='form-group' >
+		<label class='col-md-2  control-label' for="child-active">Active</label>
+		<div class='col-md-1'>
+			<input class='form-control' name='Active' type='checkbox' id='child-active' [(ngModel)]='child.Active' placeholder="Active">
+		</div>
+	</div>
+	<div class='form-group'>
+		<button (click)='update()' id='update' class='col-md-1 col-md-offset-2 btn btn-primary'>Update</button>
+	</div>
+	<!-- {{diagnostic}} -->
+</div>

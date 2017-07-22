@@ -15,8 +15,8 @@
 		<div class='form-group'>
 			<label class='col-md-2 control-label' for='child-parent'>Parent</label>
 			<div class='col-md-4'>
-				<select [(ngModel)]="selectedValue" name='ParentId'>
-  					<option *ngFor="let parent of parents" [ngValue]="parent">{{parent.name}}</option>
+				<select [(ngModel)]="child.ParentId" name='ParentId' class='col-md-4 form-control'>
+  					<option *ngFor="let parent of parents" [ngValue]="parent.Id">{{parent.Name}}</option>
 				</select>
 			</div>
 		</div>

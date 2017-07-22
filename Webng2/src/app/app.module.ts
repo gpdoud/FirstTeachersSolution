@@ -25,6 +25,7 @@ import { ChildrenService } from './children.service';
 import { ChildrenListComponent } from './children-list/children-list.component';
 import { ChildDetailComponent } from './child-detail/child-detail.component';
 import { ChildAddComponent } from './child-add/child-add.component';
+import { ChildEditComponent } from './child-edit/child-edit.component';
 
 @NgModule({
   declarations: [
@@ -42,7 +43,10 @@ import { ChildAddComponent } from './child-add/child-add.component';
     ,UserListComponent
     ,UserEditComponent
     ,UserAddComponent
-    ,ChildrenListComponent, ChildDetailComponent, ChildAddComponent	
+    ,ChildrenListComponent
+    ,ChildDetailComponent
+    ,ChildAddComponent
+    ,ChildEditComponent	
   ],
   imports: [
     BrowserModule

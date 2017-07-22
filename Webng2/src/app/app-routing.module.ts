@@ -5,6 +5,7 @@ import { HomeComponent } from './home.component';
 import { AboutComponent } from './about.component';
 import { ChildDetailComponent } from './child-detail/child-detail.component';
 import { ChildAddComponent } from './child-add/child-add.component';
+import { ChildEditComponent } from './child-edit/child-edit.component';
 import { ChildrenListComponent } from './children-list/children-list.component';
 import { ParentAddComponent } from './parent-add.component';
 import { ParentListComponent } from './parent-list.component';
@@ -20,6 +21,7 @@ const routes: Routes = [
 	{ path: '', redirectTo: '/home', pathMatch: 'full' }
 	,{ path: 'home', component: HomeComponent }
 	,{ path: 'child/add', component: ChildAddComponent }
+	,{ path: 'child/edit/:id', component: ChildEditComponent }
 	,{ path: 'child/detail/:id', component: ChildDetailComponent }
 	,{ path: 'child/list', component: ChildrenListComponent }
 	,{ path: 'parent/add', component: ParentAddComponent }
