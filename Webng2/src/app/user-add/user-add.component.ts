@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 
-import { UserService } from './user.service';
-import { User } from './user';
+import { UserService } from '../user.service';
+import { User } from '../user';
 
 @Component({
 	selector: 'user-add'

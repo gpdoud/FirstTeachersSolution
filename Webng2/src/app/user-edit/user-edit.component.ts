@@ -1,11 +1,11 @@
 import { Component, Input, Output, OnInit } from '@angular/core';
 import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 import { Observable } from 'rxjs/Observable';
-import { UserService } from './user.service';
+import { UserService } from '../user.service';
 
 import 'rxjs/add/operator/switchMap';
 
-import { User } from './user';
+import { User } from '../user';
 
 @Component({
 	selector: 'user-edit-comp'

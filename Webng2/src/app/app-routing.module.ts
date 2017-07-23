@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-import { HomeComponent } from './home.component';
-import { AboutComponent } from './about.component';
+import { HomeComponent } from './home/home.component';
+import { AboutComponent } from './about/about.component';
 import { ChildDetailComponent } from './child-detail/child-detail.component';
 import { ChildAddComponent } from './child-add/child-add.component';
 import { ChildEditComponent } from './child-edit/child-edit.component';
@@ -11,14 +11,14 @@ import { MailingAddComponent } from './mailing-add/mailing-add.component';
 import { MailingEditComponent } from './mailing-edit/mailing-edit.component';
 import { MailingDetailComponent } from './mailing-detail/mailing-detail.component';
 import { MailingListComponent } from './mailing-list/mailing-list.component';
-import { ParentAddComponent } from './parent-add.component';
-import { ParentListComponent } from './parent-list.component';
-import { ParentDetailComponent } from './parent-detail.component';
-import { ParentEditComponent } from './parent-edit.component';
-import { UserDetailComponent } from './user-detail.component';
-import { UserListComponent } from './user-list.component';
-import { UserAddComponent } from './user-add.component';
-import { UserEditComponent } from './user-edit.component';
+import { ParentAddComponent } from './parent-add/parent-add.component';
+import { ParentListComponent } from './parent-list/parent-list.component';
+import { ParentDetailComponent } from './parent-detail/parent-detail.component';
+import { ParentEditComponent } from './parent-edit/parent-edit.component';
+import { UserDetailComponent } from './user-detail/user-detail.component';
+import { UserListComponent } from './user-list/user-list.component';
+import { UserAddComponent } from './user-add/user-add.component';
+import { UserEditComponent } from './user-edit/user-edit.component';
 // import { ParameterComponent } from './parameter.component';
 
 const routes: Routes = [

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
-import { ParentService } from './parent.service';
-import { Parent } from './parent';
+import { ParentService } from '../parent.service';
+import { Parent } from '../parent';
 
 @Component({
 	selector: 'parent-list'

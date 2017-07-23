@@ -1,11 +1,11 @@
 import { Component, Input, Output, OnInit } from '@angular/core';
 import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 import { Observable } from 'rxjs/Observable';
-import { ParentService } from './parent.service';
+import { ParentService } from '../parent.service';
 
 import 'rxjs/add/operator/switchMap';
 
-import { Parent } from './parent';
+import { Parent } from '../parent';
 
 @Component({
 	selector: 'parent-edit-comp'

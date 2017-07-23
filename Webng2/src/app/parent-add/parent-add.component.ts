@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 
-import { ParentService } from './parent.service';
-import { Parent } from './parent';
+import { ParentService } from '../parent.service';
+import { Parent } from '../parent';
 
 @Component({
 	selector: 'parent-add'
