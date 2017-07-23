@@ -12,9 +12,9 @@
 		</div>
 	</div>
 		<div class='form-group'>
-			<label class='col-md-2 control-label' for='child-baptized'>Baptized</label>
+			<label class='col-md-2 control-label' for='date-baptized'>Baptized</label>
 			<div class='col-md-4'>
-				<input class='form-control' type='text' id='child-baptized' [(ngModel)]='child.DateBaptized' name='Baptized'>
+				<input class='form-control' type='date' id='date-baptized' [ngModel]='child.DateBaptized | date: "yyyy-MM-dd"' (ngModelChange)='child.DateBaptized = $event' name='DateBaptized'>
 			</div>
 		</div>
 		<div class='form-group'>
