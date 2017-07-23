@@ -15,6 +15,7 @@ import { ParentAddComponent } from './parent-add/parent-add.component';
 import { ParentListComponent } from './parent-list/parent-list.component';
 import { ParentDetailComponent } from './parent-detail/parent-detail.component';
 import { ParentEditComponent } from './parent-edit/parent-edit.component';
+import { ScheduleListComponent } from './schedule-list/schedule-list.component';
 import { UserDetailComponent } from './user-detail/user-detail.component';
 import { UserListComponent } from './user-list/user-list.component';
 import { UserAddComponent } from './user-add/user-add.component';
@@ -36,6 +37,7 @@ const routes: Routes = [
 	,{ path: 'parent/detail/:id', component: ParentDetailComponent }
 	,{ path: 'parent/edit/:id', component: ParentEditComponent }
 	,{ path: 'parent/list', component: ParentListComponent }
+	,{ path: 'schedule/list', component: ScheduleListComponent }
 	,{ path: 'user/add', component: UserAddComponent }
 	,{ path: 'user/list', component: UserListComponent }
 	,{ path: 'user/detail/:id', component: UserDetailComponent }

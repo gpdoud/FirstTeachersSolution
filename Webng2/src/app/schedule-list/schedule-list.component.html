@@ -1,0 +1,31 @@
+<h4>{{title}}</h4>
+<a routerLink='/schedule/add'>Create New</a>
+<table class='table table-default'>
+	<thead>
+	<tr>
+		<th>Id</th>
+		<th>MonthToMail</th>
+		<th>DateMailed</th>
+		<th>Child</th>
+		<th>Mailing</th>
+		<th>Active</th>
+		<th>Action</th></tr>
+	</thead>
+	<tbody>
+	
+	<tr *ngFor='let schedule of schedules'>
+		<td>{{schedule.Id}}</td>
+		<td>{{schedule.DateToMail | date: 'MMM-yyyy'}}</td>
+		<td>{{schedule.DateMailed | date: 'MMM-yyyy'}}</td>
+		<td>{{schedule.Child.Name}}</td>
+		<td>{{schedule.Mailing.Name}}</td>
+		<td>{{schedule.Active ? 'Yes' : ' '}}</td>
+		<td>
+			<span><a routerLink="/schedule/detail/{{schedule.Id}}"><span class="glyphicon glyphicon-list-alt" title="Detail"></span></a></span>
+			<span><a routerLink="/schedule/edit/{{schedule.Id}}"><span class="glyphicon glyphicon-pencil" title="Edit"></span></a></span>
+			<!-- <span ng-if="ctrl.IsUserAdmin"><a href="#/users/remove/{{user.ID}}"></a></span> -->
+		</td>
+	</tr>
+	
+	</tbody>
+</table>
