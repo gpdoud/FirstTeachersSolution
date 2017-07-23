@@ -1,0 +1,30 @@
+<div class='form-horizontal'  *ngIf='mailing'>
+	<div class='form-group'>
+		<label class='col-md-2 control-label' for="mailing-id">Id</label>
+		<div class='col-md-1'>
+			<label class='control-label form-control' name='Id' id="mailing-id">{{mailing.Id}}</label>
+		</div>
+	</div>
+	<div class='form-group' >
+		<label class='col-md-2  control-label' for="mailing-first-name">Name</label>
+		<div class='col-md-4'>
+			<input class='col-md-4 form-control' name='FirstName' type='text' id='mailing-first-name' [(ngModel)]='mailing.Name' placeholder="First Name">
+		</div>
+	</div>
+	<div class='form-group' >
+		<label class='col-md-2  control-label' for="mailing-last-name">MailAfterMonths</label>
+		<div class='col-md-4'>
+			<input class='form-control' name='LastName' type='text' id='mailing-last-name' [(ngModel)]='mailing.MailAfterMonths' placeholder="Last Name">
+		</div>
+	</div>	
+	<div class='form-group' >
+		<label class='col-md-2  control-label' for="mailing-active">Active</label>
+		<div class='col-md-1'>
+			<input class='form-control' name='Active' type='checkbox' id='mailing-active' [(ngModel)]='mailing.Active' placeholder="Active">
+		</div>
+	</div>
+	<div class='form-group'>
+		<button (click)='update()' id='update' class='col-md-1 col-md-offset-2 btn btn-primary'>Update</button>
+	</div>
+	<!-- {{diagnostic}} -->
+</div>

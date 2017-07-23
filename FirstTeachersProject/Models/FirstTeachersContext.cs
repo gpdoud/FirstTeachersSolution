@@ -24,5 +24,7 @@ namespace FirstTeachersProject.Models
 		public System.Data.Entity.DbSet<FirstTeachersProject.Models.Parent> Parents { get; set; }
 
 		public System.Data.Entity.DbSet<FirstTeachersProject.Models.Child> Children { get; set; }
+
+		public System.Data.Entity.DbSet<FirstTeachersProject.Models.Mailing> Mailings { get; set; }
 	}
 }

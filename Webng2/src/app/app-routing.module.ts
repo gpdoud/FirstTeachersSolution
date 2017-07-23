@@ -7,6 +7,10 @@ import { ChildDetailComponent } from './child-detail/child-detail.component';
 import { ChildAddComponent } from './child-add/child-add.component';
 import { ChildEditComponent } from './child-edit/child-edit.component';
 import { ChildrenListComponent } from './children-list/children-list.component';
+import { MailingAddComponent } from './mailing-add/mailing-add.component';
+import { MailingEditComponent } from './mailing-edit/mailing-edit.component';
+import { MailingDetailComponent } from './mailing-detail/mailing-detail.component';
+import { MailingListComponent } from './mailing-list/mailing-list.component';
 import { ParentAddComponent } from './parent-add.component';
 import { ParentListComponent } from './parent-list.component';
 import { ParentDetailComponent } from './parent-detail.component';
@@ -24,6 +28,10 @@ const routes: Routes = [
 	,{ path: 'child/edit/:id', component: ChildEditComponent }
 	,{ path: 'child/detail/:id', component: ChildDetailComponent }
 	,{ path: 'child/list', component: ChildrenListComponent }
+	,{ path: 'mailing/edit/:id', component: MailingEditComponent }
+	,{ path: 'mailing/add', component: MailingAddComponent }
+	,{ path: 'mailing/detail/:id', component: MailingDetailComponent }
+	,{ path: 'mailing/list', component: MailingListComponent }
 	,{ path: 'parent/add', component: ParentAddComponent }
 	,{ path: 'parent/detail/:id', component: ParentDetailComponent }
 	,{ path: 'parent/edit/:id', component: ParentEditComponent }

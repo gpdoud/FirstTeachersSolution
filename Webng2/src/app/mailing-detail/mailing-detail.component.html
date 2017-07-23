@@ -1,0 +1,11 @@
+<div class='form-horizontal'  *ngIf='mailing'>
+	<table class='table table-default'>
+	<tr><td>Id</td><td>{{mailing.Id}}</td></tr>
+	<tr><td>Name</td><td>{{mailing.Name}}</td></tr>
+	<tr><td>MailAfterMonths</td><td>{{mailing.MailAfterMonths}}</td></tr>
+	<tr><td>Active</td><td>{{mailing.Active ? 'Yes' : ''}}</td></tr>
+	<tr><td colspan="2">
+		<button routerLink='/mailing/edit/{{mailing.Id}}' id='update' class='col-md-1 col-md-offset-1 btn btn-primary' [disabled]="editable">Edit</button>
+		<button (click)='remove(mailing.Id)' id='delete' class='col-md-1 col-md-offset-2 btn btn-danger' [disabled]="editable">Delete</button></td></tr>
+	</table>
+</div>

@@ -1,0 +1,22 @@
+<h4>{{title}}</h4>
+<a routerLink='/mailing/add'>Create New</a>
+<table class='table table-default'>
+	<thead>
+	<tr><th>Id</th><th>Name</th><th>MailAfterMonths</th><th>Active</th><th>Action</th></tr>
+	</thead>
+	<tbody>
+	
+	<tr *ngFor='let mailing of mailings'>
+		<td>{{mailing.Id}}</td>
+		<td>{{mailing.Name}}</td>
+		<td>{{mailing.MailAfterMonths}}</td>
+		<td>{{mailing.Active ? 'Yes' : ' '}}</td>
+		<td>
+			<span><a routerLink="/mailing/detail/{{mailing.Id}}"><span class="glyphicon glyphicon-list-alt" title="Detail"></span></a></span>
+			<span><a routerLink="/mailing/edit/{{mailing.Id}}"><span class="glyphicon glyphicon-pencil" title="Edit"></span></a></span>
+			<!-- <span ng-if="ctrl.IsUserAdmin"><a href="#/mailings/remove/{{mailing.ID}}"></a></span> -->
+		</td>
+	</tr>
+	
+	</tbody>
+</table>

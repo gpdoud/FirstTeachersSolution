@@ -10,6 +10,14 @@ import { ContentComponent } from './content.component';
 import { HomeComponent } from './home.component';
 import { MenuComponent } from './menu.component';
 import { MenuListComponent } from './menu-list.component';
+import { Child } from './child';
+import { ChildrenService } from './children.service';
+import { ChildrenListComponent } from './children-list/children-list.component';
+import { ChildDetailComponent } from './child-detail/child-detail.component';
+import { ChildAddComponent } from './child-add/child-add.component';
+import { ChildEditComponent } from './child-edit/child-edit.component';
+import { MailingService } from './mailing.service';
+import { MailingListComponent } from './mailing-list/mailing-list.component';
 import { ParentService } from './parent.service';
 import { ParentAddComponent } from './parent-add.component';
 import { ParentEditComponent } from './parent-edit.component';
@@ -20,12 +28,9 @@ import { UserAddComponent } from './user-add.component';
 import { UserDetailComponent } from './user-detail.component';
 import { UserEditComponent } from './user-edit.component';
 import { UserListComponent } from './user-list.component';
-import { Child } from './child';
-import { ChildrenService } from './children.service';
-import { ChildrenListComponent } from './children-list/children-list.component';
-import { ChildDetailComponent } from './child-detail/child-detail.component';
-import { ChildAddComponent } from './child-add/child-add.component';
-import { ChildEditComponent } from './child-edit/child-edit.component';
+import { MailingDetailComponent } from './mailing-detail/mailing-detail.component';
+import { MailingEditComponent } from './mailing-edit/mailing-edit.component';
+import { MailingAddComponent } from './mailing-add/mailing-add.component';
 
 @NgModule({
   declarations: [
@@ -35,6 +40,11 @@ import { ChildEditComponent } from './child-edit/child-edit.component';
     ,AboutComponent
     ,MenuComponent
     ,MenuListComponent
+    ,ChildrenListComponent
+    ,ChildDetailComponent
+    ,ChildAddComponent
+    ,ChildEditComponent
+    ,MailingListComponent	
     ,ParentAddComponent
     ,ParentEditComponent
     ,ParentListComponent
@@ -42,11 +52,7 @@ import { ChildEditComponent } from './child-edit/child-edit.component';
     ,UserDetailComponent
     ,UserListComponent
     ,UserEditComponent
-    ,UserAddComponent
-    ,ChildrenListComponent
-    ,ChildDetailComponent
-    ,ChildAddComponent
-    ,ChildEditComponent	
+    ,UserAddComponent, MailingDetailComponent, MailingEditComponent, MailingAddComponent
   ],
   imports: [
     BrowserModule
@@ -55,7 +61,8 @@ import { ChildEditComponent } from './child-edit/child-edit.component';
     ,FormsModule
   ],
   providers: [
-    ParentService
+    MailingService
+    ,ParentService
     ,ChildrenService
   	,UserService
   ],
