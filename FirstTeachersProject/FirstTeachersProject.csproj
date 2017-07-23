@@ -186,6 +186,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\MailingsController.cs" />
     <Compile Include="Controllers\ParentsController.cs" />
+    <Compile Include="Controllers\SchedulesController.cs" />
     <Compile Include="Controllers\UsersController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="Global.asax.cs">
@@ -237,11 +238,16 @@
     <Compile Include="Migrations\201707221920196_Added Mailing model and controller.Designer.cs">
       <DependentUpon>201707221920196_Added Mailing model and controller.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201707231444062_Added Schedule.cs" />
+    <Compile Include="Migrations\201707231444062_Added Schedule.Designer.cs">
+      <DependentUpon>201707231444062_Added Schedule.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Child.cs" />
     <Compile Include="Models\FirstTeachersContext.cs" />
     <Compile Include="Models\Mailing.cs" />
     <Compile Include="Models\Parent.cs" />
+    <Compile Include="Models\Schedule.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -318,6 +324,11 @@
     <Content Include="Views\Mailings\Details.cshtml" />
     <Content Include="Views\Mailings\Edit.cshtml" />
     <Content Include="Views\Mailings\Index.cshtml" />
+    <Content Include="Views\Schedules\Create.cshtml" />
+    <Content Include="Views\Schedules\Delete.cshtml" />
+    <Content Include="Views\Schedules\Details.cshtml" />
+    <Content Include="Views\Schedules\Edit.cshtml" />
+    <Content Include="Views\Schedules\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -370,6 +381,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201707221920196_Added Mailing model and controller.resx">
       <DependentUpon>201707221920196_Added Mailing model and controller.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201707231444062_Added Schedule.resx">
+      <DependentUpon>201707231444062_Added Schedule.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
