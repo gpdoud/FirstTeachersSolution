@@ -8,11 +8,16 @@ namespace FirstTeachersProject.Models {
 		public int Id { get; set; }
 		public DateTime DateToMail { get; set; }
 		public DateTime? DateMailed { get; set; }
+		public bool Active { get; set; } = true;
+		public DateTime DateCreated { get; set; } = DateTime.Now;
+		public DateTime? DateUpdated { get; set; } = null;
 
 		public int ChildId { get; set; }
 		public virtual Child Child { get; set; }
 		public int MailingId { get; set; }
 		public virtual Mailing Mailing { get; set; }
+
+
 
 		public void Clone(Schedule schedule) {
 			this.Id = schedule.Id;
