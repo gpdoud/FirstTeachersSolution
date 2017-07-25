@@ -56,10 +56,14 @@ import { ScheduleEditComponent } from './schedule-edit/schedule-edit.component';
     ,ParentEditComponent
     ,ParentListComponent
     ,ParentDetailComponent
+    ,ScheduleListComponent
+    ,ScheduleDetailComponent
+    ,ScheduleAddComponent
+    ,ScheduleEditComponent
     ,UserDetailComponent
     ,UserListComponent
     ,UserEditComponent
-    ,UserAddComponent, ScheduleListComponent, ScheduleDetailComponent, ScheduleAddComponent, ScheduleEditComponent
+    ,UserAddComponent
   ],
   imports: [
     BrowserModule

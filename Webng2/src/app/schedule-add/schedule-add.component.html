@@ -1,3 +1,44 @@
-<p>
-  schedule-add works!
-</p>
+<div class='form-horizontal'>
+	<form>
+		<div class='form-group'>
+			<label class='col-md-2 control-label' for='schedule-name'>DateToMail</label>
+			<div class='col-md-4'>
+				<input class='form-control' type='date' id='schedule-name' [(ngModel)]='schedule.DateToMail' name='DateToMail'>
+			</div>
+		</div>
+		<div class='form-group'>
+			<label class='col-md-2 control-label' for='schedule-baptized'>DateMailed</label>
+			<div class='col-md-4'>
+				<input class='form-control' type='date' id='schedule-baptized' [ngModel]="schedule.DateDateMailed | date: 'yyyy-MM-dd'" ((ngModelChange)='schedule.DateDateMailed = $event' name='DateMailed'>
+			</div>
+		</div>
+		<div class='form-group'>
+			<label class='col-md-2 control-label' for='schedule-child'>Child</label>
+			<div class='col-md-4'>
+				<select [(ngModel)]="schedule.ChildId" name='ChildId' class='col-md-4 form-control'>
+  					<option *ngFor="let child of children" [ngValue]="child.Id">{{child.Name}}</option>
+				</select>
+			</div>
+		</div>
+		<div class='form-group'>
+			<label class='col-md-2 control-label' for='schedule-mailing'>Mailing</label>
+			<div class='col-md-4'>
+				<select [(ngModel)]="schedule.MailingId" name='MailingId' class='col-md-4 form-control'>
+  					<option *ngFor="let mailing of mailings" [ngValue]="mailing.Id">{{mailing.Name}}</option>
+				</select>
+			</div>
+		</div>
+		<div class='form-group'>
+			<label class='col-md-2 control-label' for='schedule-active'>Active</label>
+			<div class='col-md-4'>
+				<input class='form-control' type='checkbox' id='schedule-active' [(ngModel)]='schedule.Active' name='Active'>
+			</div>
+		</div>
+		<div class='form-group'>
+			<div class='col-md-2 col-md-offset-3'>
+				<button type='submit' class='btn btn-success' (click)='OnSubmit()'>Submit</button>
+			</div>
+		</div>
+	</form>
+	<!-- {{diagnostic}} -->
+</div>

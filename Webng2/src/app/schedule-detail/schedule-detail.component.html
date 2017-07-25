@@ -1,3 +1,13 @@
-<p>
-  schedule-detail works!
-</p>
+<div class='form-horizontal'  *ngIf='schedule'>
+	<table class='table table-default'>
+	<tr><td>Id</td><td>{{schedule.Id}}</td></tr>
+	<tr><td>DateToMail</td><td>{{schedule.DateToMail}}</td></tr>
+	<tr><td>DateMailed</td><td>{{schedule.DateMailed | date}}</td></tr>
+	<tr><td>Child</td><td>{{schedule.Child.Name}}</td></tr>
+	<tr><td>Mailing</td><td>{{schedule.Mailing.Name}}</td></tr>
+	<tr><td>Active</td><td>{{schedule.Active ? 'Yes' : ''}}</td></tr>
+	<tr><td colspan="2">
+		<button routerLink='/schedule/edit/{{schedule.Id}}' id='update' class='col-md-1 col-md-offset-1 btn btn-primary' [disabled]="editable">Edit</button>
+		<button (click)='remove(schedule.Id)' id='delete' class='col-md-1 col-md-offset-2 btn btn-danger' [disabled]="editable">Delete</button></td></tr>
+	</table>
+</div>
