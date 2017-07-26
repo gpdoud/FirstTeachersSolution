@@ -28,7 +28,7 @@ export class ChildDetailComponent implements OnInit {
 
 	logAndNav(resp) {
 		console.log(resp),
-		this.router.navigate(['/parent/list'])
+		this.router.navigate(['/child/list'])
 	}
 
 	ngOnInit() {

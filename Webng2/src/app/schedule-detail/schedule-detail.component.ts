@@ -27,7 +27,7 @@ export class ScheduleDetailComponent implements OnInit {
 
 	logAndNav(resp) {
 		console.log(resp),
-		this.router.navigate(['/parent/list'])
+		this.router.navigate(['/schedule/list'])
 	}
 
 	ngOnInit() {

@@ -22,6 +22,7 @@
 			<span><a routerLink="/child/detail/{{child.Id}}"><span class="glyphicon glyphicon-list-alt" title="Detail"></span></a></span>
 			<span><a routerLink="/child/edit/{{child.Id}}"><span class="glyphicon glyphicon-pencil" title="Edit"></span></a></span>
 			<!-- <span ng-if="ctrl.IsUserAdmin"><a href="#/users/remove/{{user.ID}}"></a></span> -->
+			<span><a (click)="scheduleMailings(child.Id)"><span class="glyphicon glyphicon-th-list" title="schedule"></span></a></span>
 		</td>
 	</tr>
 	

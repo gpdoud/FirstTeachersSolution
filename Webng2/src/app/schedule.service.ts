@@ -17,6 +17,7 @@ export class ScheduleService {
 	schedule: Schedule[];
 
 	constructor(private http: Http) {}
+
 	list(): Promise<Schedule[]> {
 		return this.http.get(this.url+'List')
 			.toPromise()

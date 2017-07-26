@@ -7,46 +7,53 @@ import { Observable } from 'rxjs';
 
 import { Child } from './child';
 
-@Injectable() 
-export class ChildrenService {
+const urlBase = 'http://localhost:50814/';
+const mvcCtrl = 'Children/';
+const url: string = urlBase + mvcCtrl;
 
-	private urlBase: string = 'http://localhost:50814/';
-	private mvcCtrl: string = 'Children/';
-	private url: string = this.urlBase + this.mvcCtrl;	
+@Injectable()
+export class ChildrenService {
 
 	children: Child[];
 
 	constructor(private http: Http) {}
+
+	schedule(id): Promise<any> {
+		return this.http.get(url+'ScheduleMailings/'+id)
+			.toPromise()
+			.then(resp => resp.json()  || {})
+			.catch(this.handleError);
+	}
 	list(): Promise<Child[]> {
-		return this.http.get(this.url+'List')
+		return this.http.get(url+'List')
 			.toPromise()
 			.then(resp => resp.json() as Child[])
 			.catch(this.handleError);	
 	}
 
 	get(id): Promise<Child> {
-		return this.http.get(this.url+'Get/'+id)
+		return this.http.get(url+'Get/'+id)
 			.toPromise()
 			.then(resp => resp.json() as Child)
 			.catch(this.handleError);	
 	}
 
 	add(child: Child): Promise<Child> {
-		return this.http.post(this.url+'Add', child)
+		return this.http.post(url+'Add', child)
 			.toPromise()
 			.then(resp => resp.json() || {})
 			.catch(this.handleError);
 	}
 
 	change(child: Child): Promise<any> {
-		return this.http.post(this.url+'Change', child)
+		return this.http.post(url+'Change', child)
 			.toPromise()
 			.then(resp => resp.json() || {})
 			.catch(this.handleError);
 	}
 
 	remove(id): Promise<any> {
-		return this.http.get(this.url+'Remove/'+id)
+		return this.http.get(url+'Remove/'+id)
 			.toPromise()
 			.then(resp => resp.json() || {})
 			.catch(this.handleError);	

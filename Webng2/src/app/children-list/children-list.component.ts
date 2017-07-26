@@ -22,6 +22,12 @@ export class ChildrenListComponent implements OnInit {
 		)
 	}
 
+	scheduleMailings(childId): void {
+		this.childSvc.schedule(childId).then(
+			resp => console.log("ScheduleMailings", resp)
+		)
+	}
+
 	ngOnInit() {
 		this.getChildren();
 	}

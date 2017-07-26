@@ -7,14 +7,14 @@ import { Observable } from 'rxjs';
 
 import { User } from './user';
 
-const urlBase: string = 'http://localhost:50814/';
-const mvcCtrl: string = 'Users/';
-const url: string = this.urlBase + this.mvcCtrl;
+const urlBase = 'http://localhost:50814/';
+const mvcCtrl = 'Users/';
+const url: string = urlBase + mvcCtrl;
 
 @Injectable()
 export class UserService {
 
-	user: User
+	user: User;
 
 	users: User[] = [
 		new User(1,'Super','Admin','sa','sa','sa@sa.com',true,true, new Date("July 16, 2017 12:00:00"), null, null)

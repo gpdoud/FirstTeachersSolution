@@ -15,6 +15,26 @@ namespace FirstTeachersProject.Controllers
     {
         private FirstTeachersContext db = new FirstTeachersContext();
 
+		public ActionResult ScheduleMailings(int Id) {
+			Child child = db.Children.Find(Id);
+			if(child == null) {
+				return new JsonNetResult { Data = new JsonReturnMessage { Result = "Error", Message = "ChildId is not found" } };
+			}
+			foreach (Mailing mailing in db.Mailings.ToList()) {
+				Schedule schedule = new Schedule {
+					Id = 0,
+					DateToMail = child.DateBaptized.AddMonths(mailing.MailAfterMonths),
+					DateMailed = null,
+					ChildId = Id,
+					MailingId = mailing.Id,
+					DateCreated = DateTime.Now,
+					DateUpdated = null
+				};
+				db.Schedules.Add(schedule);
+			}
+			db.SaveChanges();
+			return new JsonNetResult { Data = new JsonReturnMessage { Result = "Ok", Message = "Success" } };
+		}
 		public ActionResult List() {
 			return new JsonNetResult { Data = db.Children.ToList() };
 		}

@@ -10,7 +10,7 @@ import { Parent } from '../parent';
   selector: 'child-add',
   templateUrl: './child-add.component.html',
   styleUrls: ['./child-add.component.css']
-  ,providers: [ParentService]
+  ,providers: []
 })
 export class ChildAddComponent implements OnInit {
 
